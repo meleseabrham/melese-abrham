@@ -21,7 +21,7 @@ const HiddenResume = () => {
           <div className="md:col-span-1">
             <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden bg-gray-900 shadow-lg">
               <img
-                src="/assets/img/profile.png"
+                src="/assets/project/profile.png"
                 alt="Melese Abrham"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 ease-in-out"
               />
@@ -73,7 +73,7 @@ const HiddenResume = () => {
                     rel="noopener noreferrer"
                     className="text-blue-500 hover:underline"
                   >
-                    https://personal-website-5ugp.vercel.app
+                   https://personal-website-5ugp.vercel.app/
                   </a>
                 </li>
               </ul>
