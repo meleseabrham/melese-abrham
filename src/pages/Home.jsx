@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaDownload, FaEnvelope } from 'react-icons/fa';
-import Typed from 'react-typed';
+import { Typewriter } from 'react-simple-typewriter';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import HiddenResume from '../components/HiddenResume';
 import { generatePDF } from '../utils/pdfGenerator';
@@ -55,14 +55,17 @@ const Home = () => {
 
             <div className="text-xl text-gray-200 mb-6 text-center">
               I'm{' '}
-              <Typed
-                strings={['Software Developer', 'Web Developer', 'Android Developer']}
-                typeSpeed={50}
-                backSpeed={30}
-                backDelay={2000}
-                loop
-                className="text-primary font-semibold"
-              />
+              <span className="text-primary font-semibold">
+                <Typewriter
+                  words={['Software Developer', 'Web Developer', 'Android Developer']}
+                  loop={true}
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </span>
             </div>
 
             <motion.div
@@ -100,7 +103,66 @@ const Home = () => {
               </Link>
             </motion.div>
 
-            {/* Social Links and Skills... */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="social-links flex justify-center gap-4 mb-6 mt-8"
+            >
+              <a
+                href="https://github.com/meleseabrham"
+                className="text-2xl hover:text-primary transition-colors me-3"
+                title="GitHub"
+              >
+                <i className="bi bi-github"></i>
+              </a>
+              <a
+                href="https://x.com/meleseabrham17?t=yP7tHZ7KaJqszSujlRvcOA&s=09"
+                className="text-2xl hover:text-primary transition-colors me-3"
+                title="X → Twitter"
+              >
+                <i className="bi bi-twitter-x"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/melesseabrham51?mibextid=JRoKGi"
+                className="text-2xl hover:text-primary transition-colors me-3"
+                title="Facebook"
+              >
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/melesse_ab?utm_source=qr&igsh=MWc2MGZkbmpnMGd6bA=="
+                className="text-2xl hover:text-primary transition-colors me-3"
+                title="Instagram"
+              >
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/melese-abrham-4b2219369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                className="text-2xl hover:text-primary transition-colors"
+                title="LinkedIn"
+              >
+                <i className="bi bi-linkedin"></i>
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="mt-12 flex flex-wrap gap-3 justify-center"
+            >
+              {['HTML', 'CSS', 'JavaScript', 'PHP', 'React', 'Dart', 'Flutter', 'Kotlin'].map(
+                (tech) => (
+                  <span
+                    key={tech}
+                    className="px-4 py-2 bg-gray-800/70 rounded-full text-sm text-gray-300 hover:bg-primary/20 hover:text-white transition-colors cursor-default"
+                  >
+                    {tech}
+                  </span>
+                )
+              )}
+            </motion.div>
           </motion.div>
         </div>
 
@@ -118,14 +180,17 @@ const Home = () => {
 
             <div className="text-3xl text-gray-200 mb-8">
               I'm{' '}
-              <Typed
-                strings={['Software Developer', 'Web Developer', 'Android Developer']}
-                typeSpeed={50}
-                backSpeed={30}
-                backDelay={2000}
-                loop
-                className="text-primary font-semibold"
-              />
+              <span className="text-primary font-semibold">
+                <Typewriter
+                  words={['Software Developer', 'Web Developer', 'Android Developer']}
+                  loop={true}
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </span>
             </div>
 
             <motion.div
@@ -139,7 +204,15 @@ const Home = () => {
                 disabled={isGeneratingPDF}
                 className="btn btn-primary flex items-center justify-center gap-2 hover:scale-105 transition-transform disabled:opacity-50"
               >
-                {isGeneratingPDF ? 'Generating PDF...' : (
+                {isGeneratingPDF ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Generating...
+                  </>
+                ) : (
                   <>
                     <FaDownload />
                     Download Resume
@@ -155,7 +228,66 @@ const Home = () => {
               </Link>
             </motion.div>
 
-            {/* Social Links and Skills... */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="social-links text-center mt-8"
+            >
+              <a
+                href="https://github.com/meleseabrham"
+                className="text-2xl hover:text-primary transition-colors me-3"
+                title="GitHub"
+              >
+                <i className="bi bi-github"></i>
+              </a>
+              <a
+                href="https://x.com/meleseabrham17?t=yP7tHZ7KaJqszSujlRvcOA&s=09"
+                className="text-2xl hover:text-primary transition-colors me-3"
+                title="X → Twitter"
+              >
+                <i className="bi bi-twitter-x"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/melesseabrham51?mibextid=JRoKGi"
+                className="text-2xl hover:text-primary transition-colors me-3"
+                title="Facebook"
+              >
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/melesse_ab?utm_source=qr&igsh=MWc2MGZkbmpnMGd6bA=="
+                className="text-2xl hover:text-primary transition-colors me-3"
+                title="Instagram"
+              >
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/melese-abrham-4b2219369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                className="text-2xl hover:text-primary transition-colors"
+                title="LinkedIn"
+              >
+                <i className="bi bi-linkedin"></i>
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="mt-12 flex flex-wrap gap-3"
+            >
+              {['HTML', 'CSS', 'JavaScript', 'PHP', 'React', 'Dart', 'Flutter', 'Kotlin'].map(
+                (tech) => (
+                  <span
+                    key={tech}
+                    className="px-4 py-2 bg-gray-800/70 rounded-full text-sm text-gray-300 hover:bg-primary/20 hover:text-white transition-colors cursor-default"
+                  >
+                    {tech}
+                  </span>
+                )
+              )}
+            </motion.div>
           </motion.div>
         </div>
 
