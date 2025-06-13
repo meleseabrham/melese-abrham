@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-secondary text-gray-100;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply px-6 py-2 rounded-lg font-medium transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-opacity-90;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold mb-8 text-center;
+  }
+
+  .nav-link {
+    @apply hover:text-primary transition-colors duration-300;
+  }
+
+  .skill-bar {
+    @apply h-2 bg-gray-700 rounded-full overflow-hidden;
+  }
+
+  .skill-progress {
+    @apply h-full bg-primary transition-all duration-500;
+  }
+
+  .social-link {
+    @apply text-gray-400 hover:text-primary transform hover:scale-110 transition-all duration-300;
+    @apply w-10 h-10 rounded-full flex items-center justify-center;
+    @apply hover:bg-gray-800/50 hover:shadow-lg hover:shadow-primary/20;
+  }
+
+  .social-links a {
+    @apply text-gray-400 inline-block;
+    @apply hover:text-primary transform hover:scale-125;
+    @apply transition-all duration-300;
+  }
+
+  .social-links a.github:hover {
+    @apply text-gray-100;
+  }
+
+  .social-links a.twitter:hover {
+    @apply text-[#1DA1F2];
+  }
+
+  .social-links a.facebook:hover {
+    @apply text-[#4267B2];
+  }
+
+  .social-links a.instagram:hover {
+    @apply text-[#E4405F];
+  }
+
+  .social-links a.linkedin:hover {
+    @apply text-[#0077B5];
+  }
+}
