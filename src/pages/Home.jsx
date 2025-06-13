@@ -1,12 +1,12 @@
 // src/pages/Home.jsx
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { FaDownload, FaEnvelope } from 'react-icons/fa';
-import { Typewriter } from 'react-simple-typewriter';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import HiddenResume from '../components/HiddenResume';
-import { generatePDF } from '../utils/pdfGenerator';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FaDownload, FaEnvelope } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import HiddenResume from "../components/HiddenResume";
+import { generatePDF } from "../utils/pdfGenerator";
 
 const Home = () => {
   const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
@@ -16,8 +16,8 @@ const Home = () => {
     try {
       await generatePDF();
     } catch (error) {
-      console.error('Download failed:', error);
-      alert('Failed to generate PDF. Please try again.');
+      console.error("Download failed:", error);
+      alert("Failed to generate PDF. Please try again.");
     } finally {
       setIsGeneratingPDF(false);
     }
@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-secondary to-gray-900 relative overflow-hidden">
       <HiddenResume />
-      
+
       <section className="relative h-screen flex flex-col md:flex-row">
         {/* Mobile View */}
         <div className="w-full md:hidden flex flex-col items-center justify-center p-8 min-h-screen">
@@ -54,10 +54,14 @@ const Home = () => {
             </h1>
 
             <div className="text-xl text-gray-200 mb-6 text-center">
-              I'm{' '}
+              I'm{" "}
               <span className="text-primary font-semibold">
                 <Typewriter
-                  words={['Software Developer', 'Web Developer', 'Android Developer']}
+                  words={[
+                    "Software Developer",
+                    "Web Developer",
+                    "Android Developer",
+                  ]}
                   loop={true}
                   cursor
                   cursorStyle="_"
@@ -81,9 +85,25 @@ const Home = () => {
               >
                 {isGeneratingPDF ? (
                   <>
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <svg
+                      className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
                     </svg>
                     Generating...
                   </>
@@ -152,16 +172,23 @@ const Home = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="mt-12 flex flex-wrap gap-3 justify-center"
             >
-              {['HTML', 'CSS', 'JavaScript', 'PHP', 'React', 'Dart', 'Flutter', 'Kotlin'].map(
-                (tech) => (
-                  <span
-                    key={tech}
-                    className="px-4 py-2 bg-gray-800/70 rounded-full text-sm text-gray-300 hover:bg-primary/20 hover:text-white transition-colors cursor-default"
-                  >
-                    {tech}
-                  </span>
-                )
-              )}
+              {[
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "PHP",
+                "React",
+                "Dart",
+                "Flutter",
+                "Kotlin",
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="px-4 py-2 bg-gray-800/70 rounded-full text-sm text-gray-300 hover:bg-primary/20 hover:text-white transition-colors cursor-default"
+                >
+                  {tech}
+                </span>
+              ))}
             </motion.div>
           </motion.div>
         </div>
@@ -179,10 +206,14 @@ const Home = () => {
             </h1>
 
             <div className="text-3xl text-gray-200 mb-8">
-              I'm{' '}
+              I'm{" "}
               <span className="text-primary font-semibold">
                 <Typewriter
-                  words={['Software Developer', 'Web Developer', 'Android Developer']}
+                  words={[
+                    "Software Developer",
+                    "Web Developer",
+                    "Android Developer",
+                  ]}
                   loop={true}
                   cursor
                   cursorStyle="_"
@@ -206,9 +237,25 @@ const Home = () => {
               >
                 {isGeneratingPDF ? (
                   <>
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <svg
+                      className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
                     </svg>
                     Generating...
                   </>
@@ -232,40 +279,59 @@ const Home = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="social-links text-center mt-8"
+              className="social-links flex flex-wrap gap-10 mt-8"
             >
               <a
                 href="https://github.com/meleseabrham"
-                className="text-2xl hover:text-primary transition-colors me-3"
+                className="text-2xl hover:text-primary transition-transform transform hover:scale-110"
                 title="GitHub"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="bi bi-github"></i>
               </a>
+
               <a
                 href="https://x.com/meleseabrham17?t=yP7tHZ7KaJqszSujlRvcOA&s=09"
-                className="text-2xl hover:text-primary transition-colors me-3"
-                title="X → Twitter"
+                className="text-2xl hover:text-primary transition-transform transform hover:scale-110"
+                title="X (Twitter)"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="bi bi-twitter-x"></i>
               </a>
+
               <a
                 href="https://www.facebook.com/melesseabrham51?mibextid=JRoKGi"
-                className="text-2xl hover:text-primary transition-colors me-3"
+                className="text-2xl hover:text-primary transition-transform transform hover:scale-110"
                 title="Facebook"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="bi bi-facebook"></i>
               </a>
+
               <a
                 href="https://www.instagram.com/melesse_ab?utm_source=qr&igsh=MWc2MGZkbmpnMGd6bA=="
-                className="text-2xl hover:text-primary transition-colors me-3"
+                className="text-2xl hover:text-primary transition-transform transform hover:scale-110"
                 title="Instagram"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="bi bi-instagram"></i>
               </a>
+
               <a
                 href="https://www.linkedin.com/in/melese-abrham-4b2219369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                className="text-2xl hover:text-primary transition-colors"
+                className="text-2xl hover:text-primary transition-transform transform hover:scale-110"
                 title="LinkedIn"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="bi bi-linkedin"></i>
               </a>
@@ -277,16 +343,23 @@ const Home = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="mt-12 flex flex-wrap gap-3"
             >
-              {['HTML', 'CSS', 'JavaScript', 'PHP', 'React', 'Dart', 'Flutter', 'Kotlin'].map(
-                (tech) => (
-                  <span
-                    key={tech}
-                    className="px-4 py-2 bg-gray-800/70 rounded-full text-sm text-gray-300 hover:bg-primary/20 hover:text-white transition-colors cursor-default"
-                  >
-                    {tech}
-                  </span>
-                )
-              )}
+              {[
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "PHP",
+                "React",
+                "Dart",
+                "Flutter",
+                "Kotlin",
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="px-4 py-2 bg-gray-800/70 rounded-full text-sm text-gray-300 hover:bg-primary/20 hover:text-white transition-colors cursor-default"
+                >
+                  {tech}
+                </span>
+              ))}
             </motion.div>
           </motion.div>
         </div>
