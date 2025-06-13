@@ -68,12 +68,12 @@ const HiddenResume = () => {
                 </li>
                 <li>
                   <a
-                    href="https://website-sigma-eight-42.vercel.app"
+                    href="https://personal-website-5ugp.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-500 hover:underline"
                   >
-                    Website
+                    https://personal-website-5ugp.vercel.app
                   </a>
                 </li>
               </ul>

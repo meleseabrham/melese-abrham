@@ -7,7 +7,7 @@ const Portfolio = () => {
       title: 'E-Commerce Platform',
       description:
         'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.',
-      image: 'src/assets/project/log.png',
+      image: '/assets/project/log.png',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       githubUrl: 'https://github.com/meleseabrham/shopping-app',
       liveUrl: '#',
@@ -16,7 +16,7 @@ const Portfolio = () => {
       title: 'Shopping App',
       description:
         'A mobile task management application developed using Flutter. Includes features like task categorization, reminders, and progress tracking.',
-      image: 'src/assets/project/app.png',
+      image: '/assets/project/app.png',
       technologies: ['Flutter', 'Dart', 'Firebase'],
       githubUrl: 'https://github.com/meleseabrham/shopping-app',
       liveUrl: '#',
@@ -25,7 +25,7 @@ const Portfolio = () => {
       title: 'Complain Management System',
       description:
         'A secure complain management system built for Assosa University using HTML, CSS, PHP,javascript,bootstrap and MySQL. Implements role-based access control and real-time stock tracking.',
-      image: 'src/assets/project/cms.png',
+      image: '/assets/project/cms.png',
       technologies: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap'],
       githubUrl: 'https://github.com/meleseabrham/Complain-Management-System',
       liveUrl: '#',
