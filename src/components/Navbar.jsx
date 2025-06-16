@@ -30,7 +30,7 @@ const Navbar = () => {
               className="h-10 w-auto"
             />
             <Link to="/" className="text-2xl font-bold text-primary">
-            Melese<span className="text-white">Abrham</span>
+            Melese<span className="text-white"> Abrham</span>
           </Link>
           </Link>
 

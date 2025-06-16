@@ -275,7 +275,7 @@ const Home = () => {
               </Link>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
@@ -335,7 +335,7 @@ const Home = () => {
               >
                 <i className="bi bi-linkedin"></i>
               </a>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               initial={{ opacity: 0 }}
@@ -369,10 +369,11 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/80 via-secondary/20 to-transparent z-10" />
           <img
             src="/assets/img/hero-bg.jpg"
-            alt="Hero Background"
-            className="w-full h-full object-cover object-center"
+            alt="Decorative background"
+            className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
+            aria-hidden="true"
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-primary/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-l from-primary/5 to-transparent z-20" />
         </div>
       </section>
     </div>
