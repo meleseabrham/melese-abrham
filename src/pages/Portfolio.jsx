@@ -142,8 +142,9 @@ const Portfolio = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
             >
-              <FaGithub size={20} />
-              <span>View More Projects on GitHub</span>
+              <FaGithub size={30} />
+             <span className="text-lg">View More Projects on GitHub</span>
+
             </a>
           </motion.div>
         </motion.div>
