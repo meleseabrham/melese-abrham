@@ -1,36 +1,63 @@
-import { motion } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import {
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
+  SiStripe,
+  SiFlutter,
+  SiDart,
+  SiFirebase,
+  SiPhp,
+  SiMysql,
+  SiJavascript,
+  SiBootstrap,
+} from "react-icons/si";
+
+const techIcons = {
+  React: <SiReact className="text-cyan-400" title="React" />,
+  "Node.js": <SiNodedotjs className="text-green-600" title="Node.js" />,
+  MongoDB: <SiMongodb className="text-green-500" title="MongoDB" />,
+  Stripe: <SiStripe className="text-purple-600" title="Stripe" />,
+  Flutter: <SiFlutter className="text-sky-500" title="Flutter" />,
+  Dart: <SiDart className="text-blue-400" title="Dart" />,
+  Firebase: <SiFirebase className="text-yellow-400" title="Firebase" />,
+  PHP: <SiPhp className="text-indigo-400" title="PHP" />,
+  MySQL: <SiMysql className="text-blue-600" title="MySQL" />,
+  JavaScript: <SiJavascript className="text-yellow-400" title="JavaScript" />,
+  Bootstrap: <SiBootstrap className="text-purple-600" title="Bootstrap" />,
+};
 
 const Portfolio = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: "E-Commerce Platform",
       description:
-        'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.',
-      image: '/assets/project/log.png',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      githubUrl: 'https://github.com/meleseabrham/shopping-app',
-      liveUrl: '#',
+        "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.",
+      image: "/assets/project/log.png",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      githubUrl: "https://github.com/meleseabrham/shopping-app",
+      liveUrl: "#",
     },
     {
-      title: 'Shopping App',
+      title: "Shopping App",
       description:
-        'A mobile task management application developed using Flutter. Includes features like task categorization, reminders, and progress tracking.',
-      image: '/assets/project/app.png',
-      technologies: ['Flutter', 'Dart', 'Firebase'],
-      githubUrl: 'https://github.com/meleseabrham/shopping-app',
-      liveUrl: '#',
+        "A mobile task management application developed using Flutter. Includes features like task categorization, reminders, and progress tracking.",
+      image: "/assets/project/app.png",
+      technologies: ["Flutter", "Dart", "Firebase"],
+      githubUrl: "https://github.com/meleseabrham/shopping-app",
+      liveUrl: "#",
     },
     {
-      title: 'Complain Management System',
+      title: "Complain Management System",
       description:
-        'A secure complain management system built for Assosa University using HTML, CSS, PHP,javascript,bootstrap and MySQL. Implements role-based access control and real-time stock tracking.',
-      image: '/assets/project/cms.png',
-      technologies: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap'],
-      githubUrl: 'https://github.com/meleseabrham/Complain-Management-System',
-      liveUrl: '#',
+        "A secure complain management system built for Assosa University using HTML, CSS, PHP, javascript, bootstrap and MySQL. Implements role-based access control and real-time stock tracking.",
+      image: "/assets/project/cms.png",
+      technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
+      githubUrl: "https://github.com/meleseabrham/Complain-Management-System",
+      liveUrl: "#",
     },
-  ]
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,7 +67,7 @@ const Portfolio = () => {
         staggerChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -48,7 +75,7 @@ const Portfolio = () => {
       y: 0,
       opacity: 1,
     },
-  }
+  };
 
   return (
     <div className="min-h-screen pt-20 pb-16">
@@ -57,13 +84,15 @@ const Portfolio = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          
         >
-            <br></br>
-            <br></br><br></br><br></br><br></br>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <h1 className="section-title">Portfolio</h1>
-          <hr></hr>
-          <br></br>
+          <hr />
+          <br />
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -84,7 +113,8 @@ const Portfolio = () => {
                     alt={project.title}
                     className="w-full h-full object-cover"
                     onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/400x300?text=Project+Image'
+                      e.target.src =
+                        "https://via.placeholder.com/400x300?text=Project+Image";
                     }}
                   />
                   {/* Overlay with Links */}
@@ -97,7 +127,7 @@ const Portfolio = () => {
                     >
                       <FaGithub size={24} />
                     </a>
-                    {project.liveUrl !== '#' && (
+                    {project.liveUrl !== "#" && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
@@ -112,15 +142,19 @@ const Portfolio = () => {
 
                 {/* Project Info */}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    {project.title}
+                  </h3>
                   <p className="text-gray-400 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-4">
                     {project.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                        className="flex items-center gap-2 px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                        title={tech}
                       >
-                        {tech}
+                        {techIcons[tech] || tech}
+                        <span>{tech}</span>
                       </span>
                     ))}
                   </div>
@@ -143,14 +177,13 @@ const Portfolio = () => {
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
             >
               <FaGithub size={30} />
-             <span className="text-lg">View More Projects on GitHub</span>
-
+              <span className="text-lg">View More Projects on GitHub</span>
             </a>
           </motion.div>
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Portfolio 
+export default Portfolio;
