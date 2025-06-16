@@ -12,6 +12,8 @@ import {
   SiMysql,
   SiJavascript,
   SiBootstrap,
+  SiHtml5,
+  SiCss3,
 } from "react-icons/si";
 
 const techIcons = {
@@ -26,6 +28,8 @@ const techIcons = {
   MySQL: <SiMysql className="text-blue-600" title="MySQL" />,
   JavaScript: <SiJavascript className="text-yellow-400" title="JavaScript" />,
   Bootstrap: <SiBootstrap className="text-purple-600" title="Bootstrap" />,
+  HTML: <SiHtml5 className="text-orange-600" title="HTML5" />,
+  CSS: <SiCss3 className="text-blue-600" title="CSS3" />,
 };
 
 const Portfolio = () => {
@@ -53,7 +57,7 @@ const Portfolio = () => {
       description:
         "A secure complain management system built for Assosa University using HTML, CSS, PHP, javascript, bootstrap and MySQL. Implements role-based access control and real-time stock tracking.",
       image: "/assets/project/cms.png",
-      technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
+      technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap","HTML","CSS"],
       githubUrl: "https://github.com/meleseabrham/Complain-Management-System",
       liveUrl: "#",
     },
