@@ -14,7 +14,7 @@ const Resume = () => {
   const experience = [
     {
       role: "Software Application Developer",
-      company: "INSA",
+      company: " Information Network Security Agency (INSA) ",
       period: "Mar 2025 - Present",
       description: "Working on secure web and mobile application development.",
       responsibilities: [
@@ -33,7 +33,7 @@ const Resume = () => {
     },
     {
       role: "Data Encoder",
-      company: "POESSA",
+      company: "Private Organization Employee Social Security Administration (POESSA)  ",
       period: "Oct 2024 - Mar 2025",
       description: "Managed and processed data with high accuracy.",
       responsibilities: [

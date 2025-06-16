@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   const isActive = (path) => {
-    return location.pathname === path ? "text-primary" : "";
+    return location.pathname === path ? "text-primary border-b-2 border-primary pb-1"  : "";
   };
 
   return (
@@ -29,9 +29,9 @@ const Navbar = () => {
               alt="MeleseAbrham Logo"
               className="h-10 w-auto"
             />
-            <Link to="/" className="text-2xl font-bold text-primary">
-            Melese<span className="text-white"> Abrham</span>
-          </Link>
+            <span className="text-2xl font-bold text-primary">
+              Melese<span className="text-white"> Abrham</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

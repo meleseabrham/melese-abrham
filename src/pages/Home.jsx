@@ -7,6 +7,27 @@ import { Typewriter } from "react-simple-typewriter";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import HiddenResume from "../components/HiddenResume";
 import { generatePDF } from "../utils/pdfGenerator";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiPhp,
+  SiReact,
+  SiDart,
+  SiFlutter,
+  SiKotlin,
+} from "react-icons/si";
+
+const techIcons = {
+  HTML: <SiHtml5 className="text-orange-500" />,
+  CSS: <SiCss3 className="text-blue-500" />,
+  JavaScript: <SiJavascript className="text-yellow-400" />,
+  PHP: <SiPhp className="text-indigo-400" />,
+  React: <SiReact className="text-cyan-400" />,
+  Dart: <SiDart className="text-blue-400" />,
+  Flutter: <SiFlutter className="text-sky-500" />,
+  Kotlin: <SiKotlin className="text-purple-400" />,
+};
 
 const Home = () => {
   const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
@@ -141,8 +162,9 @@ const Home = () => {
               ].map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 bg-gray-800/70 rounded-full text-sm text-gray-300 hover:bg-primary/20 hover:text-white transition-colors cursor-default"
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-800/70 rounded-full text-sm text-gray-300 hover:bg-primary/20 hover:text-white transition-colors"
                 >
+                  {techIcons[tech]}
                   {tech}
                 </span>
               ))}
@@ -250,8 +272,9 @@ const Home = () => {
               ].map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 bg-gray-800/70 rounded-full text-sm text-gray-300 hover:bg-primary/20 hover:text-white transition-colors cursor-default"
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-800/70 rounded-full text-sm text-gray-300 hover:bg-primary/20 hover:text-white transition-colors"
                 >
+                  {techIcons[tech]}
                   {tech}
                 </span>
               ))}
