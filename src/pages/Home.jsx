@@ -126,49 +126,6 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="social-links flex justify-center gap-4 mb-6 mt-8"
-            >
-              <a
-                href="https://github.com/meleseabrham"
-                className="text-2xl hover:text-primary transition-colors me-3"
-                title="GitHub"
-              >
-                <i className="bi bi-github"></i>
-              </a>
-              <a
-                href="https://x.com/meleseabrham17?t=yP7tHZ7KaJqszSujlRvcOA&s=09"
-                className="text-2xl hover:text-primary transition-colors me-3"
-                title="X → Twitter"
-              >
-                <i className="bi bi-twitter-x"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/melesseabrham51?mibextid=JRoKGi"
-                className="text-2xl hover:text-primary transition-colors me-3"
-                title="Facebook"
-              >
-                <i className="bi bi-facebook"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/melesse_ab?utm_source=qr&igsh=MWc2MGZkbmpnMGd6bA=="
-                className="text-2xl hover:text-primary transition-colors me-3"
-                title="Instagram"
-              >
-                <i className="bi bi-instagram"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/melese-abrham-4b2219369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                className="text-2xl hover:text-primary transition-colors"
-                title="LinkedIn"
-              >
-                <i className="bi bi-linkedin"></i>
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
               className="mt-12 flex flex-wrap gap-3 justify-center"
             >
@@ -274,68 +231,6 @@ const Home = () => {
                 Contact Me
               </Link>
             </motion.div>
-
-            {/* <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="social-links flex flex-wrap gap-10 mt-8"
-            >
-              <a
-                href="https://github.com/meleseabrham"
-                className="text-2xl hover:text-primary transition-transform transform hover:scale-110"
-                title="GitHub"
-                aria-label="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bi bi-github"></i>
-              </a>
-
-              <a
-                href="https://x.com/meleseabrham17?t=yP7tHZ7KaJqszSujlRvcOA&s=09"
-                className="text-2xl hover:text-primary transition-transform transform hover:scale-110"
-                title="X (Twitter)"
-                aria-label="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bi bi-twitter-x"></i>
-              </a>
-
-              <a
-                href="https://www.facebook.com/melesseabrham51?mibextid=JRoKGi"
-                className="text-2xl hover:text-primary transition-transform transform hover:scale-110"
-                title="Facebook"
-                aria-label="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bi bi-facebook"></i>
-              </a>
-
-              <a
-                href="https://www.instagram.com/melesse_ab?utm_source=qr&igsh=MWc2MGZkbmpnMGd6bA=="
-                className="text-2xl hover:text-primary transition-transform transform hover:scale-110"
-                title="Instagram"
-                aria-label="Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bi bi-instagram"></i>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/melese-abrham-4b2219369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                className="text-2xl hover:text-primary transition-transform transform hover:scale-110"
-                title="LinkedIn"
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bi bi-linkedin"></i>
-              </a>
-            </motion.div> */}
 
             <motion.div
               initial={{ opacity: 0 }}
