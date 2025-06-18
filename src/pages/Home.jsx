@@ -51,15 +51,15 @@ const Home = () => {
       <section className="relative h-screen flex flex-col md:flex-row">
         {/* Mobile View */}
         <div className="w-full md:hidden flex flex-col items-center justify-center p-8 min-h-screen">
-          <motion.div
+        <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             className="flex flex-col items-center"
           >
             <div className="relative w-64 h-64 group mb-8">
-              <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative w-full h-full rounded-full p-2 bg-gradient-to-r from-primary via-blue-400 to-primary">
+              <div className="absolute -inset- rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary blur-lg opacity-50 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <div className="relative w-full h-full rounded-full p-1 bg-gradient-to-r from-primary via-blue-100 to-primary">
                 <div className="w-full h-full rounded-full overflow-hidden bg-gray-900">
                   <img
                     src="/assets/img/hero-bg.jpg"
