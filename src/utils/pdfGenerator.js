@@ -18,50 +18,70 @@ export const generatePDF = async () => {
       width: element.style.width,
       left: element.style.left,
       top: element.style.top,
+      padding: element.style.padding,
+      backgroundColor: element.style.backgroundColor,
     };
 
-    // Make element visible but off-screen
+    // A4 dimensions in mm (standard)
+    const A4_WIDTH_MM = 210;
+    const A4_HEIGHT_MM = 297;
+    
+    // Calculate pixel equivalents at 96 DPI
+    const A4_WIDTH_PX = Math.floor((A4_WIDTH_MM * 96) / 25.4);
+    const A4_HEIGHT_PX = Math.floor((A4_HEIGHT_MM * 96) / 25.4);
+
+    // Prepare the element for capture
     element.style.position = 'absolute';
     element.style.visibility = 'visible';
-    element.style.height = 'auto';
-    element.style.width = '1000px';
+    element.style.width = `${A4_WIDTH_PX}px`;
+    element.style.height = 'auto'; // Let content determine height
     element.style.left = '-10000px';
     element.style.top = '0';
+    element.style.padding = '20px';
+    element.style.backgroundColor = '#ffffff';
+    element.style.boxSizing = 'border-box';
 
-    // Wait for fonts and images to load
-    await document.fonts.ready;
+    // Wait for layout to stabilize
     await new Promise(resolve => setTimeout(resolve, 500));
+    await document.fonts.ready;
 
+    // Capture with high quality
     const canvas = await html2canvas(element, {
       scale: 2,
       useCORS: true,
-      logging: true,
       backgroundColor: '#ffffff',
       allowTaint: true,
       scrollX: 0,
       scrollY: 0,
+      windowWidth: A4_WIDTH_PX,
+      windowHeight: element.scrollHeight,
     });
 
-    // Restore original styles
-    element.style.position = originalStyles.position;
-    element.style.visibility = originalStyles.visibility;
-    element.style.height = originalStyles.height;
-    element.style.width = originalStyles.width;
-    element.style.left = originalStyles.left;
-    element.style.top = originalStyles.top;
-
-    const imgData = canvas.toDataURL('image/png');
+    // Create PDF
     const pdf = new jsPDF({
       orientation: 'portrait',
       unit: 'mm',
-      format: 'a4'
+      format: 'a4',
     });
 
-    const imgProps = pdf.getImageProperties(imgData);
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+    // Calculate image dimensions
+    const imgData = canvas.toDataURL('image/png');
+    const imgWidth = A4_WIDTH_MM;
+    const imgHeight = (canvas.height * A4_WIDTH_MM) / canvas.width;
 
-    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    // Add image to PDF with proper scaling
+    pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+
+    // Check if content exceeds one page
+    if (imgHeight > A4_HEIGHT_MM) {
+      pdf.addPage();
+      pdf.addImage(imgData, 'PNG', 0, -(A4_HEIGHT_MM), imgWidth, imgHeight);
+    }
+
+    // Restore original styles
+    Object.assign(element.style, originalStyles);
+
+    // Save the PDF
     pdf.save('Melese_Abrham_Resume.pdf');
   } catch (error) {
     console.error('Error generating PDF:', error);

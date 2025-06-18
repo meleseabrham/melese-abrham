@@ -52,24 +52,24 @@ const Home = () => {
         {/* Mobile View */}
         <div className="w-full md:hidden flex flex-col items-center justify-center p-8 min-h-screen">
         <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col items-center"
-          >
-            <div className="relative w-64 h-64 group mb-8">
-              <div className="absolute -inset- rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary blur-lg opacity-50 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div className="relative w-full h-full rounded-full p-1 bg-gradient-to-r from-primary via-blue-100 to-primary">
-                <div className="w-full h-full rounded-full overflow-hidden bg-gray-900">
-                  <img
-                    src="/assets/img/hero-bg.jpg"
-                    alt="Melese Abrham"
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-              </div>
-            </div>
-
+  initial={{ opacity: 0, scale: 0.5 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8 }}
+  className="flex flex-col items-center"
+>
+  <div className="relative w-64 h-64 group mb-8">
+    <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary via-blue-400 to-primary blur-lg opacity-50 group-hover:opacity-50 transition-opacity duration-300"></div>
+    
+    <div className="relative w-full h-full rounded-full p-1 bg-gradient-to-r from-primary via-blue-100 to-primary">
+      <div className="w-full h-full rounded-full overflow-hidden bg-gray-900">
+        <img
+          src="/assets/img/profile.png"
+          alt="Melese Abrham"
+          className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+    </div>
+  </div>
             <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-blue-400 to-primary animate-glow text-center">
               Melese Abrham
             </h1>
@@ -283,12 +283,13 @@ const Home = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="hidden md:block w-1/2 h-full relative">
+        <div className="hidden md:block w-1/2 min-h-screen relative">
+
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/80 via-secondary/20 to-transparent z-10" />
           <img
             src="/assets/img/hero-bg.jpg"
             alt="Decorative background"
-            className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
+            className="w-full h-full object-contain  object-center transition-transform duration-700 hover:scale-105"
             aria-hidden="true"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-primary/5 to-transparent z-20" />
