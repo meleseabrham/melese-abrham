@@ -39,8 +39,8 @@ const HiddenResume = () => {
             <div className="resume-section">
               <h2 className="resume-section-title">CONTACT</h2>
               <ul className="resume-list">
-                <li className="resume-list-item">+251929527564</li>
-                <li className="resume-list-item">+251951939566</li>
+                <li className="resume-list-item">+25192 952 7564</li>
+                <li className="resume-list-item">+25195 193 9566</li>
                 <li className="resume-list-item">
                   <a
                     href="mailto:Meleseabrham17@gmail.com"
@@ -75,7 +75,7 @@ const HiddenResume = () => {
               <ul className="resume-bullet-list">
                 <li className="resume-bullet-item">Writing code (coding)</li>
                 <li className="resume-bullet-item">
-                  Viewing stratified customer through my skill
+                  Viewing satisfied customer through my skill
                 </li>
                 <li className="resume-bullet-item">Reading books</li>
               </ul>

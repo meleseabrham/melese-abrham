@@ -116,7 +116,7 @@ const Services = () => {
               scalable, and user-friendly applications.
             </p>
             <a
-              href="/contact"
+              href="../contact"
               className="btn btn-primary inline-block"
             >
              Contact Me
