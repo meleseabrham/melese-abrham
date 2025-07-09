@@ -46,15 +46,15 @@ const HiddenResume = () => {
                     href="mailto:Meleseabrham17@gmail.com"
                     className="resume-link"
                   >
-                    Meleseabrham17@gmail.com
+                    meleseabrham17@gmail.com
                   </a>
                 </li>
                 <li className="resume-list-item">
                   <a
-                    href="https://personal-website-5ugp.vercel.app/"
+                    href="https://melese-abrham.vercel.app/"
                     className="resume-link"
                   >
-                    https://personal-website-5ugp.vercel.app/
+                    https://melese-abrham.vercel.app
                   </a>
                 </li>
               </ul>
@@ -66,7 +66,7 @@ const HiddenResume = () => {
                 href="https://github.com/meleseabrham"
                 className="resume-link"
               >
-                github.com/meleseabrham
+                https://github.com/meleseabrham
               </a>
             </div>
 
