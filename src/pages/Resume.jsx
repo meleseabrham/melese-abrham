@@ -33,7 +33,8 @@ const Resume = () => {
     },
     {
       role: "Data Encoder",
-      company: "Private Organization Employee Social Security Administration (POESSA)  ",
+      company:
+        "Private Organization Employee Social Security Administration (POESSA)  ",
       period: "Oct 2024 - Mar 2025",
       description: "Managed and processed data with high accuracy.",
       responsibilities: [
@@ -76,7 +77,14 @@ const Resume = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <h1 className="section-title">Resume</h1>
+          <hr />
+          <br />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Education Section */}
