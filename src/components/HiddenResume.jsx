@@ -49,25 +49,23 @@ const HiddenResume = () => {
                     meleseabrham17@gmail.com
                   </a>
                 </li>
-                <li className="resume-list-item">
-                  <a
-                    href="https://melese-abrham.vercel.app/"
-                    className="resume-link"
-                  >
-                    https://melese-abrham.vercel.app
-                  </a>
-                </li>
+               
               </ul>
             </div>
 
             <div className="resume-section">
               <h2 className="resume-section-title">PORTFOLIO</h2>
-              <a
-                href="https://github.com/meleseabrham"
-                className="resume-link"
-              >
-                https://github.com/meleseabrham
-              </a>
+           <ul className="resume-list">
+              
+               <li className="resume-list-item">
+                  <a
+                    href="https://melese-abrham.vercel.app/"
+                    className="resume-link"
+                  >
+                   https://melese-abrham.vercel.app
+                  </a>
+                </li>
+            </ul>
             </div>
 
             <div className="resume-section">
